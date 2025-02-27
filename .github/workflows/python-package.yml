@@ -1,0 +1,28 @@
+name: Python Package
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.12"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install ruff mypy
+        pip install -e .
+    - name: Lint with ruff
+      run: |
+        ruff check .
+    - name: Type check with mypy
+      run: |
+        mypy src 
