@@ -4,6 +4,7 @@
 [![PyPI version](https://badge.fury.io/py/oura-mcp-server.svg)](https://badge.fury.io/py/oura-mcp-server)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/release/python-3120/)
+[![smithery badge](https://smithery.ai/badge/@tomekkorbak/oura-mcp-server)](https://smithery.ai/server/@tomekkorbak/oura-mcp-server)
 
 A [Model Context Protocol](https://modelcontextprotocol.io/introduction) (MCP) server that provides access to the Oura API. It allows language models to query sleep, readiness, and resilience data from Oura API.
 
@@ -32,6 +33,14 @@ You'll need an Oura API token to use this server. You can obtain one by:
 1. Going to the [Oura Developer Portal](https://cloud.ouraring.com/v2/docs)
 2. Creating a Personal Access Token
 
+### Installing via Smithery
+
+To install Oura API Integration Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@tomekkorbak/oura-mcp-server):
+
+```bash
+npx -y @smithery/cli install @tomekkorbak/oura-mcp-server --client claude
+```
+
 ### Claude for Desktop
 
 Update your `claude_desktop_config.json` (located in `~/Library/Application\ Support/Claude/claude_desktop_config.json` on macOS and `%APPDATA%/Claude/claude_desktop_config.json` on Windows) to include the following:
@@ -51,7 +60,6 @@ Update your `claude_desktop_config.json` (located in `~/Library/Application\ Sup
     }
 }
 ```
-
 
 ## Example Queries
 
